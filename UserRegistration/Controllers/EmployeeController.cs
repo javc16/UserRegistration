@@ -24,12 +24,7 @@ namespace UserRegistration.Controllers
             var result = _employeeService.GetAll();
             return Ok(result);
         }
-
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Response>> GetById(int id)
-        {
-            return Ok(await _employeeService.GetById(id));
-        }
+       
 
         [HttpPost]
         public async Task<ActionResult<Response>> Post(EmployeeDTO item)
